@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--如果命名空间里的接口中没有方法定义，则mapper标签下也无子标签-->
+<mapper namespace="com.lcg.reader.mapper.BookMapper">
+    <update id="updateEvaluation">
+        update book b SET evaluation_score = (
+        select ifnull(avg(score),0) from evaluation where book_id = b.book_id and state="enable"
+        ),evaluation_quantity=(
+        select ifnull(count(*),0) from evaluation where book_id = b.book_id and state="enable"
+        )
+    </update>
+</mapper>
