@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--如果命名空间里的接口中没有方法定义，则mapper标签下也无子标签-->
-<mapper namespace="com.lcg.reader.mapper.MemberMapper">
-
-</mapper>
